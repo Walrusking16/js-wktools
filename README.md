@@ -183,7 +183,7 @@ $("div").show();
 
 ---
 
-#### Show
+#### Hide
 
 This will hide the given element(s).
 
