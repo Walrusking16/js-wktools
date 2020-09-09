@@ -1,6 +1,6 @@
 # Javascript WKTools
 
-#Document ready
+## Document ready
 
 You can call `$(functionhere)` to run the function when the document has loaded.
 
