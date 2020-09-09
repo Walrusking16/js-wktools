@@ -156,8 +156,12 @@ var selectedElements = function (collection) {
         }
         return collection;
     };
-    collection.val = function () {
-        return collection[0].value;
+    collection.val = function (arg) {
+        if (arg === null)
+            return collection[0].value;
+        else
+            collection[0].value = arg;
+        return collection[0];
     };
 };
 var $ = function () {

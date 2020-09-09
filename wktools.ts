@@ -150,8 +150,12 @@ const selectedElements = collection => {
 		}
 		return collection;
 	};
-	collection.val = () => {
-		return collection[0].value;
+	collection.val = (arg) => {
+		if (arg === null)
+			return collection[0].value;
+		else
+			collection[0].value = arg;
+		return collection[0];
 	};
 };
 
