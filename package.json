@@ -1,0 +1,19 @@
+{
+  "name": "@walrushq/wktools",
+  "version": "1.2.5",
+  "description": "You can call `$(functionhere)` to run the function when the document has loaded.",
+  "main": "wktools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Walrusking16/js-wktools.git"
+  },
+  "author": "Walrusking",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Walrusking16/js-wktools/issues"
+  },
+  "homepage": "https://github.com/Walrusking16/js-wktools#readme"
+}
