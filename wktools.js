@@ -1,4 +1,3 @@
-var elemDisplays = [];
 var selectedElements = function (collection) {
     collection.each = function (callback) {
         collection.forEach(function (element, i) {

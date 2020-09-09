@@ -1,5 +1,3 @@
-let elemDisplays = [];
-
 const selectedElements = collection => {
 	collection.each = (callback) => {
 		collection.forEach((element, i) => {
