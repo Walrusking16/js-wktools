@@ -1,8 +1,9 @@
+var elemDisplays = [];
 var selectedElements = function (collection) {
     collection.each = function (callback) {
         collection.forEach(function (element, i) {
             var boundFn = callback.bind(element);
-            boundFn(i, element);
+            boundFn(element, i);
         });
         return collection;
     };
@@ -115,6 +116,48 @@ var selectedElements = function (collection) {
             element.replaceWith.apply(element, Array.from(newElem.childNodes));
         });
         return collection;
+    };
+    collection.show = function () {
+        collection.forEach(function (element) {
+            if (element.style.display !== "none")
+                return;
+            if (element.getAttribute("current-display") !== null) {
+                element.style.display = element.getAttribute("current-display");
+                element.removeAttribute("current-display");
+            }
+            else
+                element.style.display = "block";
+        });
+        return collection;
+    };
+    collection.hide = function () {
+        collection.forEach(function (element) {
+            element.setAttribute("current-display", element.style.display);
+            element.style.display = "none";
+        });
+        return collection;
+    };
+    collection.html = function (_html) {
+        collection.forEach(function (element) {
+            element.innerHTML = _html;
+        });
+        return collection;
+    };
+    collection.data = function () {
+        var dataArgs = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            dataArgs[_i] = arguments[_i];
+        }
+        if (dataArgs[1] === undefined) {
+            return collection[0].getAttribute("data-" + dataArgs[0]);
+        }
+        else {
+            collection[0].setAttribute("data-" + dataArgs[0], dataArgs[1]);
+        }
+        return collection;
+    };
+    collection.val = function () {
+        return collection[0].value;
     };
 };
 var $ = function () {

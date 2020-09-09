@@ -169,3 +169,62 @@ $("blog").template("<div class='blog'><h1>{{title}}</h1><h3>By: {{author}}</h3>{
     "Blog content here"
 </div>
 ```
+
+---
+
+#### Show
+
+This will show the given element(s).
+
+##### JS
+```javascript
+$("div").show();
+```
+
+---
+
+#### Show
+
+This will hide the given element(s).
+
+##### JS
+```javascript
+$("div").hide();
+```
+
+---
+
+#### HTML
+
+This allows you to set the innerHTML on an element(s).
+
+##### JS
+```javascript
+$("div").html("<b>DIV</b>");
+```
+
+---
+
+#### Data
+
+This allows you to get/set a data attribute.
+
+##### JS
+```javascript
+$("#idhere").data("data_name"); // Return data attribute
+
+$("#idhere").data("data_name","newvalue"); // Set data attribute to "newvalue"
+```
+
+---
+
+#### Val
+
+This will return the value of the element.
+
+> Only returns the first element
+
+##### JS
+```javascript
+$("#idhere").val();
+```

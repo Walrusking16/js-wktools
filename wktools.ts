@@ -1,8 +1,10 @@
+let elemDisplays = [];
+
 const selectedElements = collection => {
 	collection.each = (callback) => {
 		collection.forEach((element, i) => {
 			const boundFn = callback.bind(element);
-			boundFn(i, element);
+			boundFn(element, i);
 		});
 		return collection;
 	};
@@ -113,6 +115,43 @@ const selectedElements = collection => {
 			element.replaceWith(...Array.from(newElem.childNodes));
 		});
 		return collection;
+	};
+	collection.show = () => {
+		collection.forEach((element) => {
+			if(element.style.display !== "none") return;
+			// @ts-ignore
+			if(element.getAttribute("current-display") !== null){
+				element.style.display = element.getAttribute("current-display");
+				element.removeAttribute("current-display");
+			}
+			else
+				element.style.display = "block";
+		});
+		return collection;
+	};
+	collection.hide = () => {
+		collection.forEach((element) => {
+			element.setAttribute("current-display", element.style.display);
+			element.style.display = "none";
+		});
+		return collection;
+	};
+	collection.html = (_html) => {
+		collection.forEach((element) => {
+			element.innerHTML = _html;
+		});
+		return collection;
+	};
+	collection.data = (...dataArgs) => {
+		if (dataArgs[1] === undefined) {
+			return collection[0].getAttribute("data-"+dataArgs[0]);
+		} else {
+			collection[0].setAttribute("data-"+dataArgs[0], dataArgs[1]);
+		}
+		return collection;
+	};
+	collection.val = () => {
+		return collection[0].value;
 	};
 };
 
