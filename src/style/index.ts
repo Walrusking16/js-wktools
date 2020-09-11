@@ -1,1 +1,9 @@
 import "./css";
+import "./template";
+import "./show";
+import "./hide";
+import "./addclass";
+import "./removeclass";
+import "./hasclass";
+import "./toggleclass";
+import "./html";
