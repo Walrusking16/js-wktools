@@ -226,11 +226,13 @@ $("#idhere").data("data_name","newvalue"); // Set data attribute to "newvalue"
 
 #### Val
 
-This will return the value of the element.
+This will return or set the value of the element.
 
 > Only returns the first element
 
 ##### JS
 ```javascript
-$("#idhere").val();
+$("#idhere").val(); // Return the value
+
+$("#idhere").val("newvalue"); // Set the value
 ```
