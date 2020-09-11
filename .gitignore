@@ -1,3 +1,4 @@
 /node_modules/
 gulpfile.js
 gulpfile.min.js
+webpack.config.min.js
