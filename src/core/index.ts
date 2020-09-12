@@ -3,5 +3,5 @@ import "./each";
 import "./on";
 import "./wait";
 import "./delay";
-import "./delayFinished";
+import "./delayfinished";
 import "./loop";
