@@ -1,6 +1,8 @@
 import {fn} from "../core/core";
 
 fn.prototype.show = () => {
+	if( fn.prototype.shouldDelay(() => {fn.prototype.show.apply(null)}))
+		return fn.prototype;
 	fn.prototype.this.forEach((element) => {
 		if(element.style.display !== "none") return;
 		// @ts-ignore
