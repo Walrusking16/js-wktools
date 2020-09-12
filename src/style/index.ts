@@ -7,3 +7,5 @@ import "./removeclass";
 import "./hasclass";
 import "./toggleclass";
 import "./html";
+import "./after";
+import "./before";
