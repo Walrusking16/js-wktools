@@ -317,3 +317,25 @@ This will return the cloned element
 ```javascript
 $("#idhere").clone(); // Reutrns a copy of #idhere
 ```
+
+---
+
+#### Empty
+
+This will remove all the children from the elements.
+
+##### JS
+```javascript
+$("#idhere").empty();
+```
+
+---
+
+#### Replace
+
+This will replace the element with an html string
+
+##### JS
+```javascript
+$("#idhere").replace("<div>Hello World</div>");
+```
