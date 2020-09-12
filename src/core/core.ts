@@ -10,4 +10,11 @@ window['$'] = function(...args) {
 	}
 }
 
-export const fn = function(){fn.prototype.this = this; return fn.prototype;};
+export const cash = window['$'].prototype;
+
+export const fn = function(){
+	fn.prototype.queue = [];
+	fn.prototype.delayed = false;
+	fn.prototype.this = this;
+	return fn.prototype;
+};
