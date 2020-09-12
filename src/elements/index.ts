@@ -1,1 +1,2 @@
-import "./children"
+import "./children";
+import "./clone";
