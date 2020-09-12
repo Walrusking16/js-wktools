@@ -289,5 +289,20 @@ This will insert an element after the target.
 ```javascript
 elem = document.createElement("h1");
 elem.innerText = "Hello World";
-$("#idhere").after(elem)
+$("#idhere").after(elem);
+```
+
+---
+
+#### Children
+
+This will return the children of the element.
+
+> This return the children in an array that allows you to manipulate them, in order to get just the children add `.this` to the end.
+
+##### JS
+```javascript
+$("#idhere").children(); // Reutrns children + functions
+
+$("#idhere").children().this; // Returns just the children
 ```
