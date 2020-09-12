@@ -10,7 +10,7 @@ window['$'] = function(...args) {
 	}
 }
 
-export const cash = window['$'].prototype;
+export const cash = window['$'];
 
 export const fn = function(){
 	fn.prototype.queue = [];
