@@ -1,1 +1,2 @@
 import "./attr";
+import "./removeattr";
