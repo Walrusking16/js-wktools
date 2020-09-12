@@ -236,3 +236,16 @@ $("#idhere").val(); // Return the value
 
 $("#idhere").val("newvalue"); // Set the value
 ```
+
+---
+
+#### Wait
+
+This will cause the function called after it to wait until it runs.
+
+> Time is in milliseconds
+
+##### JS
+```javascript
+$("div").wait(1000).css("color","red"); // This will wait one second before changing the color to red
+```
