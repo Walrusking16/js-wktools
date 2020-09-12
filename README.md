@@ -249,3 +249,45 @@ This will cause the function called after it to wait until it runs.
 ```javascript
 $("div").wait(1000).css("color","red"); // This will wait one second before changing the color to red
 ```
+
+---
+
+#### Loops
+
+This will continue repeating forever.
+
+##### JS
+```javascript
+
+function testPrint(){
+    console.log("Looped");
+}
+
+$.loop(testPrint, 5000); // This will print "Looped" every 5 seconds
+```
+
+---
+
+#### Before
+
+This will insert an element before the target.
+
+##### JS
+```javascript
+elem = document.createElement("h1");
+elem.innerText = "Hello World";
+$("#idhere").before(elem)
+```
+
+---
+
+#### After
+
+This will insert an element after the target.
+
+##### JS
+```javascript
+elem = document.createElement("h1");
+elem.innerText = "Hello World";
+$("#idhere").after(elem)
+```
