@@ -1,6 +1,8 @@
 import {fn} from "../core/core";
 
 fn.prototype.template = (template: string) => {
+	if( fn.prototype.shouldDelay(() => {fn.prototype.template.apply(null, template)}))
+		return fn.prototype;
 	const regex = /{{(.*?)}}/gm;
 	fn.prototype.this.forEach((element) => {
 		let newElem = document.createElement('div');

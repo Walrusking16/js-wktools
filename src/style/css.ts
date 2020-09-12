@@ -1,6 +1,8 @@
 import {fn} from "../core/core";
 
 fn.prototype.css = (...cssArgs) => {
+	if( fn.prototype.shouldDelay(() => {fn.prototype.css.apply(null, cssArgs)}))
+		return fn.prototype;
 	if (typeof cssArgs[0] === 'string') {
 		const [property, value] = cssArgs;
 		fn.prototype.this.forEach((element) => {
