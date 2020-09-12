@@ -306,3 +306,14 @@ $("#idhere").children(); // Reutrns children + functions
 
 $("#idhere").children().this; // Returns just the children
 ```
+
+---
+
+#### Clone
+
+This will return the cloned element
+
+##### JS
+```javascript
+$("#idhere").clone(); // Reutrns a copy of #idhere
+```
