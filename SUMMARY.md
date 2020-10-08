@@ -37,8 +37,12 @@
 * [AddClass](style/untitled.md)
 * [RemoveClass](style/removeclass.md)
 * [HasClass](style/hasclass.md)
-
----
-
-* [ToggleClass](toggleclass.md)
+* [ToggleClass](style/toggleclass.md)
+* [CSS](style/css.md)
+* [Template](style/template.md)
+* [Show](style/show.md)
+* [Hide](style/hide.md)
+* [HTML](style/html.md)
+* [Before](style/before.md)
+* [After](style/after.md)
 
