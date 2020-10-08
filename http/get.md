@@ -20,7 +20,11 @@ $.get("urlhere", (data) => {console.log(data);}, {dataType: "text"}) // This wil
 
 ### Options
 
-| async | dataType |
+| Name | Values |
 | :--- | :--- |
-| true, false | json, text |
+| async | **true**, false |
+| dataType | **json**, text |
+| headers | \["HeaderName", "HeaderValue"\] |
+
+
 
