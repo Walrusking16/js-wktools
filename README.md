@@ -1,341 +1,62 @@
-# Javascript WKTools
+# Initial page
 
-Install via npm: `npm i js-wktools`
+{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method-summary %}
+Get Cakes
+{% endapi-method-summary %}
 
-Non-Minified JS: `<script src="https://cdn.jsdelivr.net/npm/js-wktools@1.2.5/wktools.js"></script>`
+{% api-method-description %}
+This endpoint allows you to get free cakes.
+{% endapi-method-description %}
 
-Minified JS: `<script src="https://cdn.jsdelivr.net/npm/js-wktools@1.2.5/wktools.min.js"></script>`
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" %}
+ID of the cake to get, for free of course.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-## Document ready
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
+Authentication token to track down who is emptying our stocks.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-You can call `$(functionhere)` to run the function when the document has loaded.
+{% api-method-query-parameters %}
+{% api-method-parameter name="recipe" type="string" %}
+The API will do its best to find a cake matching the provided recipe.
+{% endapi-method-parameter %}
 
-```javascript
-function loaded(){
-    console.log("I am now ready")
-}
+{% api-method-parameter name="gluten" type="boolean" %}
+Whether the cake should be gluten-free or not.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
 
-$(loaded)
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Cake successfully retrieved.
+{% endapi-method-response-example-description %}
+
 ```
-
-You can also do this
-
-```javascript
-$(()=>{console.log("I am now ready")})
+{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
 ```
+{% endapi-method-response-example %}
 
----
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+Could not find a cake matching this query.
+{% endapi-method-response-example-description %}
 
-#### Each
-
-This will run the function given on each element
-
-```javascript
-function dosomething(){
-    console.log("Did something")
-}
-$("div").each(dosomething);
 ```
-
----
-
-#### On
-
-This will allow you to set an event listener on the element(s)
-
-[List of Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
-
-```javascript
-function clicked(){
-    console.log("I was clicked")
-}
-
-$("div").on("click",clicked); // This will call the clicked function when you click on a div
+{    "message": "Ain't no cake like that."}
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
----
 
-#### CSS
 
-This will allow you to set css on the element(s)
-
-```javascript
-$("div").css("color","red"); // This will set the color to red on
-```
-
-It can also accept an object.
-
-```javascript
-$("div").css({
-    color: 'red',
-    cursor: 'pointer'
-}); // This will set the color and the cursor.
-```
-
----
-
-#### Add Class
-
-This will add the class for the given element(s).
-
-```javascript
-$("div").addClass("red"); // This will add the red class if it does not have it
-```
-
-This will work with multiple classes.
-
-```javascript
-$("div").addClass("red blue"); // This will add the red and blue class if it does not have them
-```
-
----
-
-#### Remove Class
-
-This will remove the class for the given element(s).
-
-```javascript
-$("div").removeClass("red"); // This will remove the red class if it has it
-```
-
-This will work with multiple classes.
-
-```javascript
-$("div").removeClass("red blue"); // This will remove the red and blue class if it has them
-```
-
----
-
-#### Has Class
-
-This allows you to check if the class is on the element.
-
-> This will only work on the first element, even if there is more than one element in the list.
-
-```javascript
-$("div").hasClass("red"); // This will return true if it has the red class or false if it doesnt
-```
-
----
-
-#### Toggle Class
-
-This allows you to toggle the class on an element.
-
-```javascript
-$("div").toggleClass("red"); // If the div class does not have the red class it will be added or removed if it does have it
-```
-
-This accepts multiple classes seperated by a space
-
-```javascript
-$("div").toggleClass("red blue"); // This will toggle both the red and blue class
-```
-
----
-
-#### Attr
-
-This allows you to get/set an attributes data.
-
-##### JS
-```javascript
-$("#idhere").attr("attribute_name"); // Return attribute data
-
-$("#idhere").attr("attribute_name","newvalue"); // Set attribute data to "newvalue"
-```
-
----
-
-#### Template
-
-Anything wrapped in two curly brackets, is replaced by an html attribute of the same name.
-
-In order to display any html you put inside of the new template you must put {{content}} somewhere in the template so it knows where to place it.
-
-IE: {{author}} would look for an html attribute call author and replace it with the attribute data.
-
-##### JS
-```javascript
-$("blog").template("<div class='blog'><h1>{{title}}</h1><h3>By: {{author}}</h3>{{content}}</div>");
-```
-
-##### HTML
-```html
-<blog author="Walrusking" title="Main Title">
-    Blog content here
-</blog>
-```
-
-##### Result
-```html
-<div class="blog">
-    <h1>Main Title</h1>
-    <h3>By: Walrusking</h3>
-    "Blog content here"
-</div>
-```
-
----
-
-#### Show
-
-This will show the given element(s).
-
-##### JS
-```javascript
-$("div").show();
-```
-
----
-
-#### Hide
-
-This will hide the given element(s).
-
-##### JS
-```javascript
-$("div").hide();
-```
-
----
-
-#### HTML
-
-This allows you to set the innerHTML on an element(s).
-
-##### JS
-```javascript
-$("div").html("<b>DIV</b>");
-```
-
----
-
-#### Data
-
-This allows you to get/set a data attribute.
-
-##### JS
-```javascript
-$("#idhere").data("data_name"); // Return data attribute
-
-$("#idhere").data("data_name","newvalue"); // Set data attribute to "newvalue"
-```
-
----
-
-#### Val
-
-This will return or set the value of the element.
-
-> Only returns the first element
-
-##### JS
-```javascript
-$("#idhere").val(); // Return the value
-
-$("#idhere").val("newvalue"); // Set the value
-```
-
----
-
-#### Wait
-
-This will cause the function called after it to wait until it runs.
-
-> Time is in milliseconds
-
-##### JS
-```javascript
-$("div").wait(1000).css("color","red"); // This will wait one second before changing the color to red
-```
-
----
-
-#### Loops
-
-This will continue repeating forever.
-
-##### JS
-```javascript
-
-function testPrint(){
-    console.log("Looped");
-}
-
-$.loop(testPrint, 5000); // This will print "Looped" every 5 seconds
-```
-
----
-
-#### Before
-
-This will insert an element before the target.
-
-##### JS
-```javascript
-elem = document.createElement("h1");
-elem.innerText = "Hello World";
-$("#idhere").before(elem)
-```
-
----
-
-#### After
-
-This will insert an element after the target.
-
-##### JS
-```javascript
-elem = document.createElement("h1");
-elem.innerText = "Hello World";
-$("#idhere").after(elem);
-```
-
----
-
-#### Children
-
-This will return the children of the element.
-
-> This return the children in an array that allows you to manipulate them, in order to get just the children add `.this` to the end.
-
-##### JS
-```javascript
-$("#idhere").children(); // Reutrns children + functions
-
-$("#idhere").children().this; // Returns just the children
-```
-
----
-
-#### Clone
-
-This will return the cloned element
-
-##### JS
-```javascript
-$("#idhere").clone(); // Reutrns a copy of #idhere
-```
-
----
-
-#### Empty
-
-This will remove all the children from the elements.
-
-##### JS
-```javascript
-$("#idhere").empty();
-```
-
----
-
-#### Replace
-
-This will replace the element with an html string
-
-##### JS
-```javascript
-$("#idhere").replace("<div>Hello World</div>");
-```
