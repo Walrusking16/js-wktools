@@ -5,6 +5,10 @@
 ## Core <a id="core-1"></a>
 
 * [Document Ready](core-1/document-ready.md)
+* [Each](core-1/each.md)
+* [On](core-1/on.md)
+* [Wait](core-1/wait.md)
+* [Loop](core-1/loop.md)
 
 ## HTTP
 
@@ -12,17 +16,29 @@
 
 ## Attribute
 
-* [Untitled](attribute/untitled.md)
+* [Attr](attribute/untitled.md)
+* [RemoveAttr](attribute/removeattr.md)
 
 ## Data
 
-* [Untitled](data/untitled.md)
+* [Data](data/untitled.md)
+* [Val](data/val.md)
 
 ## Elements
 
-* [Untitled](elements/untitled.md)
+* [Children](elements/untitled.md)
+* [Clone](elements/clone.md)
+* [Empty](elements/empty.md)
+* [Replace](elements/replace.md)
+* [Find](elements/find.md)
 
 ## Style
 
-* [Untitled](style/untitled.md)
+* [AddClass](style/untitled.md)
+* [RemoveClass](style/removeclass.md)
+* [HasClass](style/hasclass.md)
+
+---
+
+* [ToggleClass](toggleclass.md)
 
