@@ -12,21 +12,21 @@
 
 ## HTTP
 
-* [Get](http/untitled.md)
+* [Get](http/get.md)
 
 ## Attribute
 
-* [Attr](attribute/untitled.md)
+* [Attr](attribute/attr.md)
 * [RemoveAttr](attribute/removeattr.md)
 
 ## Data
 
-* [Data](data/untitled.md)
+* [Data](data/data.md)
 * [Val](data/val.md)
 
 ## Elements
 
-* [Children](elements/untitled.md)
+* [Children](elements/children.md)
 * [Clone](elements/clone.md)
 * [Empty](elements/empty.md)
 * [Replace](elements/replace.md)
@@ -34,7 +34,7 @@
 
 ## Style
 
-* [AddClass](style/untitled.md)
+* [AddClass](style/addclass.md)
 * [RemoveClass](style/removeclass.md)
 * [HasClass](style/hasclass.md)
 * [ToggleClass](style/toggleclass.md)
