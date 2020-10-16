@@ -12,6 +12,7 @@
 
 ## HTTP
 
+* [Post](http/post.md)
 * [Get](http/get.md)
 
 ## Attribute
@@ -31,6 +32,7 @@
 * [Empty](elements/empty.md)
 * [Replace](elements/replace.md)
 * [Find](elements/find.md)
+* [Remove](elements/remove.md)
 
 ## Style
 
