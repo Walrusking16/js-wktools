@@ -4,3 +4,4 @@ import "./empty";
 import  "./replace";
 import "./find";
 import "./remove";
+import "./append";
