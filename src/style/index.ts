@@ -9,3 +9,4 @@ import "./toggleclass";
 import "./html";
 import "./after";
 import "./before";
+import "./text";
