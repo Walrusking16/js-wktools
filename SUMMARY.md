@@ -34,6 +34,7 @@
 * [Replace](elements/replace.md)
 * [Find](elements/find.md)
 * [Remove](elements/remove.md)
+* [Append](elements/append.md)
 
 ## Style
 
