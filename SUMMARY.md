@@ -46,6 +46,7 @@
 * [Show](style/show.md)
 * [Hide](style/hide.md)
 * [HTML](style/html.md)
+* [Text](style/text.md)
 * [Before](style/before.md)
 * [After](style/after.md)
 
