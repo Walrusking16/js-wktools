@@ -5,3 +5,5 @@ import  "./replace";
 import "./find";
 import "./remove";
 import "./append";
+import "./tohex";
+import "./torgb";
