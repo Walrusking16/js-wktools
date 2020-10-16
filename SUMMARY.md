@@ -10,6 +10,8 @@
 * [Off](core-1/off.md)
 * [Wait](core-1/wait.md)
 * [Loop](core-1/loop.md)
+* [ToHex](core-1/tohex.md)
+* [ToRGB](core-1/torgb.md)
 
 ## HTTP
 
@@ -35,6 +37,8 @@
 * [Find](elements/find.md)
 * [Remove](elements/remove.md)
 * [Append](elements/append.md)
+* [ToRGB](elements/torgb.md)
+* [ToHex](elements/tohex.md)
 
 ## Style
 
