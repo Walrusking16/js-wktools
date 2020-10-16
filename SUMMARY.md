@@ -7,6 +7,7 @@
 * [Document Ready](core-1/document-ready.md)
 * [Each](core-1/each.md)
 * [On](core-1/on.md)
+* [Off](core-1/off.md)
 * [Wait](core-1/wait.md)
 * [Loop](core-1/loop.md)
 

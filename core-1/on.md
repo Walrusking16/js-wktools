@@ -12,3 +12,5 @@ function clicked(){
 $("div").on("click",clicked); // This will call the clicked function when you click on a div
 ```
 
+
+
