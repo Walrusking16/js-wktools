@@ -25,6 +25,8 @@ $.get("urlhere", (data) => {console.log(data);}, {dataType: "text"}) // This wil
 | async | **true**, false |
 | dataType | **json**, text |
 | headers | \["HeaderName", "HeaderValue"\] |
+| beforeSend | function |
+| onError | function, passes in error reason |
 
 
 

@@ -12,6 +12,7 @@
 * [Loop](core-1/loop.md)
 * [ToHex](core-1/tohex.md)
 * [ToRGB](core-1/torgb.md)
+* [Selector](core-1/selector.md)
 
 ## HTTP
 
@@ -27,6 +28,8 @@
 
 * [Data](data/data.md)
 * [Val](data/val.md)
+* [Id](data/id.md)
+* [FormData](data/formdata.md)
 
 ## Elements
 
