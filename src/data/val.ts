@@ -1,7 +1,7 @@
 import {fn} from "../core/core";
 
 fn.prototype.val = (arg) => {
-	if( fn.prototype.shouldDelay(() => {fn.prototype.attr.val(null, arg)}))
+	if( fn.prototype.shouldDelay(() => {fn.prototype.val.apply(null, arg)}))
 		return fn.prototype;
 	if (arg === null)
 		return fn.prototype.this[0].value;
