@@ -89,29 +89,29 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 		}
 	}
 
-	request.send(data);
-
 	// @ts-ignore
 	if(typeof options.debug === "boolean" && options.debug){
 		// @ts-ignore
-		console.log("requestType: " +options.requestType);
+		console.log("Request Type: " +options.requestType);
 		// @ts-ignore
-		console.log("url: " +options.url);
+		console.log("URL: " +options.url);
 		// @ts-ignore
-		console.log("data: " +options.data);
+		console.log("Data Sent: " +data);
 		// @ts-ignore
-		console.log("async: " +options.async);
+		console.log("Async: " +useAsync);
 		// @ts-ignore
-		console.log("onSuccess: " +options.onSuccess);
+		console.log("onSuccess Function: " +options.onSuccess);
 		// @ts-ignore
-		console.log("beforeSend: " +options.beforeSend);
+		console.log("beforeSend Function: " +options.beforeSend);
 		// @ts-ignore
-		console.log("onError: " +options.onError);
+		console.log("onError Function: " +options.onError);
 		// @ts-ignore
-		console.log("dataType: " +options.dataType);
+		console.log("Response Type: " +request.responseType);
 		// @ts-ignore
-		console.log("headers: " +options.headers);
+		console.log("Response Headers: " +request.getAllResponseHeaders());
 		// @ts-ignore
-		console.log("debug: " +options.debug);
+		console.log("Debug: " +options.debug);
 	}
+
+	request.send(data);
 }
