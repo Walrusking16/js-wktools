@@ -1,7 +1,5 @@
 # Post
 
-
-
 This allows you to do a get request on any site.
 
 {% tabs %}
@@ -20,7 +18,7 @@ $.get("urlhere", (data) => {console.log(data);}, {dataType: "text"}) // This wil
 {% endtab %}
 {% endtabs %}
 
-### Options
+## Options
 
 | Name | Values |
 | :--- | :--- |

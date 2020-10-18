@@ -18,13 +18,11 @@ $.get("urlhere", (data) => {console.log(data);}, {dataType: "text"}) // This wil
 {% endtab %}
 {% endtabs %}
 
-### Options
+## Options
 
 | Name | Values |
 | :--- | :--- |
 | async | **true**, false |
 | dataType | **json**, text |
 | headers | \["HeaderName", "HeaderValue"\] |
-
-
 

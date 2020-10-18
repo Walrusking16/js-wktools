@@ -12,5 +12,3 @@ $("div").text("hello world");
 $("div").text() // Returns the html;
 ```
 
-
-

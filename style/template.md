@@ -2,9 +2,9 @@
 
 Anything wrapped in two curly brackets, is replaced by an html attribute of the same name.
 
-In order to display any html you put inside of the new template you must put {{content}} somewhere in the template so it knows where to place it.
+In order to display any html you put inside of the new template you must put  somewhere in the template so it knows where to place it.
 
-IE: {{author}} would look for an html attribute call author and replace it with the attribute data.
+IE:  would look for an html attribute call author and replace it with the attribute data.
 
 **JS**
 

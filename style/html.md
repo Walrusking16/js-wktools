@@ -12,5 +12,3 @@ $("div").html("<b>DIV</b>");
 $("div").html() // Returns the html;
 ```
 
-
-
