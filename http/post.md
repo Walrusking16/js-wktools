@@ -7,7 +7,7 @@ This allows you to do a get request on any site.
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-$.post("urlhere", (data) => {console.log(data);}) // Standard get request
+$.post("urlhere", {"id": "53"} (data) => {console.log(data);}) // Standard get request
 ```
 {% endtab %}
 

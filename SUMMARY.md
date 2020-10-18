@@ -16,6 +16,7 @@
 
 ## HTTP
 
+* [Ajax](http/ajax.md)
 * [Post](http/post.md)
 * [Get](http/get.md)
 
