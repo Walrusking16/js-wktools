@@ -5,30 +5,6 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	// @ts-ignore
 	let data = options.data === undefined ? null: options.data;
 
-	// @ts-ignore
-	if(typeof options.debug === "boolean" && options.debug){
-		// @ts-ignore
-		console.log("requestType: " +options.requestType);
-		// @ts-ignore
-		console.log("url: " +options.url);
-		// @ts-ignore
-		console.log("data: " +options.data);
-		// @ts-ignore
-		console.log("async: " +options.async);
-		// @ts-ignore
-		console.log("onSuccess: " +options.onSuccess);
-		// @ts-ignore
-		console.log("beforeSend: " +options.beforeSend);
-		// @ts-ignore
-		console.log("onError: " +options.onError);
-		// @ts-ignore
-		console.log("dataType: " +options.dataType);
-		// @ts-ignore
-		console.log("headers: " +options.headers);
-		// @ts-ignore
-		console.log("debug: " +options.debug);
-	}
-
 	let request = new XMLHttpRequest();
 	// @ts-ignore
 	let useAsync = options.async === undefined ? true: options.async;
@@ -114,4 +90,28 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	}
 
 	request.send(data);
+
+	// @ts-ignore
+	if(typeof options.debug === "boolean" && options.debug){
+		// @ts-ignore
+		console.log("requestType: " +options.requestType);
+		// @ts-ignore
+		console.log("url: " +options.url);
+		// @ts-ignore
+		console.log("data: " +options.data);
+		// @ts-ignore
+		console.log("async: " +options.async);
+		// @ts-ignore
+		console.log("onSuccess: " +options.onSuccess);
+		// @ts-ignore
+		console.log("beforeSend: " +options.beforeSend);
+		// @ts-ignore
+		console.log("onError: " +options.onError);
+		// @ts-ignore
+		console.log("dataType: " +options.dataType);
+		// @ts-ignore
+		console.log("headers: " +options.headers);
+		// @ts-ignore
+		console.log("debug: " +options.debug);
+	}
 }
