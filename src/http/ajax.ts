@@ -91,26 +91,11 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 
 	// @ts-ignore
 	if(typeof options.debug === "boolean" && options.debug){
-		// @ts-ignore
-		console.log("Request Type: " +options.requestType);
-		// @ts-ignore
-		console.log("URL: " +options.url);
-		// @ts-ignore
-		console.log("Data Sent: " +data);
-		// @ts-ignore
-		console.log("Async: " +useAsync);
-		// @ts-ignore
-		console.log("onSuccess Function: " +options.onSuccess);
-		// @ts-ignore
-		console.log("beforeSend Function: " +options.beforeSend);
-		// @ts-ignore
-		console.log("onError Function: " +options.onError);
-		// @ts-ignore
-		console.log("Response Type: " +request.responseType);
-		// @ts-ignore
-		console.log("Response Headers: " +request.getAllResponseHeaders());
-		// @ts-ignore
-		console.log("Debug: " +options.debug);
+		let debugObject = Object.assign(options, {
+			responseHeaders: request.getAllResponseHeaders(),
+			dataSent: data
+		});
+		console.log(debugObject);
 	}
 
 	request.send(data);
