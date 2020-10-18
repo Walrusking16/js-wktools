@@ -1,35 +1,22 @@
 import {cash} from "../core/core";
 
-cash.get = (url: string, success: Function, options: object = {async: true, dataType: "json", headers: {}}) => {
-	let request = new XMLHttpRequest();
+cash.get = (url: string, success: Function, options: object = {async: true, beforeSend: null, onError: null, dataType: "json", headers: {}, debug: false}) => {
 	// @ts-ignore
-	let useAsync = options.async;
-	request.open('GET', url, useAsync);
-
-	// @ts-ignore
-	if(options.dataType === undefined || options.dataType.toLowerCase() == "json")
-		request.responseType = "json";
-
-	// @ts-ignore
-	if (Array.isArray(options.headers) && options.headers.length > 0){
+	let useAsync = options.async === undefined ? true: options.async;
+	cash.ajax({
+		requestType: "GET",
+		url: url,
+		onSuccess: success,
+		async: useAsync,
 		// @ts-ignore
-		for(let key in options.headers){
-			// @ts-ignore
-			request.setRequestHeader(key, options.headers[key])
-		}
-	}
-
-	request.onload = function() {
-		if (this.status >= 200 && this.status < 400){
-			let response = this.response;
-			// @ts-ignore
-			if(options.dataType.toLowerCase() == "text")
-				response = this.responseText;
-			success(response);
-		} else {
-			console.error(request.statusText);
-		}
-	};
-
-	request.send();
+		beforeSend: options.beforeSend,
+		// @ts-ignore
+		onError: options.onError,
+		// @ts-ignore
+		dataType: options.dataType,
+		// @ts-ignore
+		headers: options.headers,
+		// @ts-ignore
+		debug: options.debug,
+	});
 }
