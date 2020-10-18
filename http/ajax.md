@@ -26,6 +26,8 @@ $.ajax({
 * **beforeSend: Function**
 * **onError: Function**
 * **dataType: String** Default: json
+  * json
+  * text
 * **headers: Object**
 * **debug: Bool** Default: false
 
