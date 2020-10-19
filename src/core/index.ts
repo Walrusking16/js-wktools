@@ -8,3 +8,4 @@ import "./loop";
 import  "./off";
 import "./tohex";
 import "./torgb";
+import "./click";
