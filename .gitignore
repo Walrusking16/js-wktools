@@ -2,7 +2,3 @@
 gulpfile.js
 gulpfile.min.js
 webpack.config.min.js
-
-package-lock.json
-
-package.json

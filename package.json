@@ -1,0 +1,26 @@
+{
+	"name": "js-wktools",
+	"version": "2.1.4",
+	"description": "A custom JQuery clone with added features that I needed.",
+	"main": "wktools.js",
+	"scripts": {
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Walrusking16/js-wktools.git"
+	},
+	"author": "Walrusking",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Walrusking16/js-wktools/issues"
+	},
+	"homepage": "https://github.com/Walrusking16/js-wktools#readme",
+
+	"devDependencies": {
+		"ts-loader": "^8.0.3",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"typescript": "^4.0.2"
+	}
+}
