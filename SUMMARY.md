@@ -2,19 +2,19 @@
 
 * [Installation](README.md)
 
-## Core <a id="core-1"></a>
+## Core
 
-* [Document Ready](core-1/document-ready.md)
-* [Each](core-1/each.md)
-* [Click](core-1/click.md)
-* [Submit](core-1/submit.md)
-* [On](core-1/on.md)
-* [Off](core-1/off.md)
-* [Wait](core-1/wait.md)
-* [Loop](core-1/loop.md)
-* [ToHex](core-1/tohex.md)
-* [ToRGB](core-1/torgb.md)
-* [Selector](core-1/selector.md)
+* [Document Ready](core/document-ready.md)
+* [Each](core/each.md)
+* [Click](core/click.md)
+* [Submit](core/submit.md)
+* [On](core/on.md)
+* [Off](core/off.md)
+* [Wait](core/wait.md)
+* [Loop](core/loop.md)
+* [ToHex](core/tohex.md)
+* [ToRGB](core/torgb.md)
+* [Selector](core/selector.md)
 
 ## HTTP
 

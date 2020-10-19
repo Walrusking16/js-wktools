@@ -1,7 +1,5 @@
 # Submit
 
-
-
 This will allow you to set a click event.
 
 ```javascript
