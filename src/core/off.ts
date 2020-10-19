@@ -1,6 +1,6 @@
 import {fn} from "./core";
 
-fn.prototype.off = (eventName: string) => {
+fn.prototype.off = (eventName: string, method: Function = null) => {
 	if( fn.prototype.shouldDelay(() => {fn.prototype.off.apply(null, [eventName])}))
 		return fn.prototype;
 	fn.prototype.this.forEach((element) => {
@@ -12,7 +12,9 @@ fn.prototype.off = (eventName: string) => {
 			return fn.prototype;
 		}
 		element.eventfunc[eventName].forEach((handler) => {
-			element.removeEventListener(eventName, handler);
+			if(method != null || handler == method){
+				element.removeEventListener(eventName, handler);
+			}
 		})
 	});
 	return fn.prototype;
