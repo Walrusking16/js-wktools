@@ -9,3 +9,4 @@ import  "./off";
 import "./tohex";
 import "./torgb";
 import "./click";
+import "./submit";
