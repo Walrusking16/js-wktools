@@ -15,6 +15,7 @@
 * [ToHex](core/tohex.md)
 * [ToRGB](core/torgb.md)
 * [Selector](core/selector.md)
+* [Now](core/now.md)
 
 ## HTTP
 
@@ -64,8 +65,5 @@
 ## Random
 
 * [String](random/string.md)
-
----
-
-* [Number](number.md)
+* [Number](random/number.md)
 
