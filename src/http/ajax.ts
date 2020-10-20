@@ -5,6 +5,41 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	// @ts-ignore
 	let data = options.data === undefined ? null: options.data;
 
+	if(data !== null){
+		if(data instanceof FormData) {
+			let ndata = ""
+			let num = 0;
+			// @ts-ignore
+			for (const [key, value] of data.entries()) {
+				if (num > 0)
+					ndata += `&${key}=${value}`;
+				else
+					ndata += `${key}=${value}`;
+				num++;
+			}
+			data = ndata;
+		} else if(typeof data === "object") {
+			let ndata = ""
+			let num = 0;
+			// @ts-ignore
+			for (const [key, value] of Object.entries(data)) {
+				if (num > 0)
+					ndata += `&${key}=${value}`;
+				else
+					ndata += `${key}=${value}`;
+				num++;
+			}
+			data = ndata;
+		}
+	}
+
+	// @ts-ignore
+	if(options.requestType == "GET") {
+		// @ts-ignore
+		options.url += `?${data}`;
+		data = null;
+	}
+
 	let request = new XMLHttpRequest();
 	// @ts-ignore
 	let useAsync = options.async === undefined ? true: options.async;
@@ -59,34 +94,6 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	if (options.beforeSend !== undefined && options.beforeSend !== null) {
 		// @ts-ignore
 		options.beforeSend();
-	}
-
-	if(data !== null){
-		if(data instanceof FormData) {
-			let ndata = ""
-			let num = 0;
-			// @ts-ignore
-			for (const [key, value] of data.entries()) {
-				if (num > 0)
-					ndata += `&${key}=${value}`;
-				else
-					ndata += `${key}=${value}`;
-				num++;
-			}
-			data = ndata;
-		} else if(typeof data === "object") {
-			let ndata = ""
-			let num = 0;
-			// @ts-ignore
-			for (const [key, value] of Object.entries(data)) {
-				if (num > 0)
-					ndata += `&${key}=${value}`;
-				else
-					ndata += `${key}=${value}`;
-				num++;
-			}
-			data = ndata;
-		}
 	}
 
 	// @ts-ignore
