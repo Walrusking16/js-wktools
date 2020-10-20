@@ -34,7 +34,7 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	}
 
 	// @ts-ignore
-	if(options.requestType == "GET") {
+	if(options.requestType == "GET" && data != null) {
 		// @ts-ignore
 		options.url += `?${data}`;
 		data = null;
