@@ -10,3 +10,4 @@ import "./tohex";
 import "./torgb";
 import "./click";
 import "./submit";
+import "./now";
