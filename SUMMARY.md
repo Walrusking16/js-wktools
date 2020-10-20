@@ -61,3 +61,11 @@
 * [Before](style/before.md)
 * [After](style/after.md)
 
+## Random
+
+* [String](random/string.md)
+
+---
+
+* [Number](number.md)
+
