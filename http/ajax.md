@@ -7,13 +7,36 @@ $.ajax({
 		requestType: "GET",
 		url: "https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new",
 		onSuccess: function(data) {
+				console.log(data)
+		},
+		onError: function(er,err) {
+				console.log(er,err)
+		},
+		dataType: "text"
+}); // This will print out random strings
+
+// You can also imput the agruments as a data object
+$.ajax({
+		requestType: "GET",
+		url: "https://www.random.org/strings/",
+		data: {
+				num: "10",
+				len: "8",
+				digits: "on",
+				upperalpha: "on",
+				loweralpha: "on",
+				unique: "on",
+				format: "plain",
+				rnd: "new"
+		},
+		onSuccess: function(data) {
 			console.log(data)
 		},
 		onError: function(er,err) {
 			console.log(er,err)
 		},
 		dataType: "text"
-}); // This will print out random strings
+});
 ```
 
 * **requestType: String**
