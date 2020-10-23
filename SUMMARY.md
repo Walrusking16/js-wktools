@@ -46,6 +46,7 @@
 * [Append](elements/append.md)
 * [ToRGB](elements/torgb.md)
 * [ToHex](elements/tohex.md)
+* [NewElem](elements/newelem.md)
 
 ## Style
 
