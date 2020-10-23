@@ -7,3 +7,4 @@ import "./remove";
 import "./append";
 import "./tohex";
 import "./torgb";
+import "./newelem";
