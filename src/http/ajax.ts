@@ -34,7 +34,7 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 	}
 
 	// @ts-ignore
-	if(options.requestType == "GET" && data != null) {
+	if(data != null) {
 		// @ts-ignore
 		options.url += `?${data}`;
 		data = null;
@@ -56,7 +56,7 @@ cash.ajax = (options: object = {requestType: "GET", url: "", data: null, async: 
 
 	// @ts-ignore
 	if(options.requestType == "POST") {
-		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	}
 
 	// @ts-ignore
