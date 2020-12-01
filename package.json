@@ -1,6 +1,6 @@
 {
 	"name": "js-wktools",
-	"version": "2.2.2",
+	"version": "2.2.3",
 	"description": "A custom JQuery clone with added features that I needed.",
 	"main": "wktools.js",
 	"scripts": {
