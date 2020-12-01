@@ -1,6 +1,6 @@
 import {fn} from "../core/core";
 
-fn.prototype.id = (arg) => {
+fn.prototype.id = (arg = null) => {
 	if( fn.prototype.shouldDelay(() => {fn.prototype.id.apply(null, arg)}))
 		return fn.prototype;
 	if (arg === null)
